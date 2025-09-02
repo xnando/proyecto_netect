@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contact-backend
+  namespace: medical-app
+  labels:
+    app: medical-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: medical-backend
+  template:
+    metadata:
+      labels:
+        app: medical-backend
+    spec:
+      # 🔴 Quitamos nodeAffinity que bloqueaba el scheduling
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values: ["medical-backend"]
+                topologyKey: "kubernetes.io/hostname"
+      containers:
+        - name: medical-backend
+          image: xnando2019/ms-medical-backend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql.medical-app.svc.cluster.local:3306/db_medical
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: mysql-root-password
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 40
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 10
+          livenessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 40
+            periodSeconds: 20
+            timeoutSeconds: 3
+            failureThreshold: 10
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

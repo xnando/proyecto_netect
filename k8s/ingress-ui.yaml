@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: medical-ingress-ui
+  namespace: medical-app
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: medical.local
+      http:
+        paths:
+          - path: /swagger-ui
+            pathType: Prefix
+            backend:
+              service:
+                name: medical-backend
+                port:
+                  number: 8080
+
+          - path: /api-docs
+            pathType: Prefix
+            backend:
+              service:
+                name: medical-backend
+                port:
+                  number: 8080
+
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: medical-frontend
+                port:
+                  number: 3000

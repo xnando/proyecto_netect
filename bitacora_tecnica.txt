@@ -1,0 +1,1003 @@
+  659  curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |   sudo gpg --dearmor -o /etc/apt/keyrings/microsoft.gpg
+  660  sudo chmod 644 /etc/apt/keyrings/microsoft.gpg
+  661  echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/edge stable main" |   sudo tee /etc/apt/sources.list.d/microsoft-edge-stable.list
+  662  sudo apt update
+  663  sudo apt install -y microsoft-edge-stable
+  664  which microsoft-edge || which microsoft-edge-stable
+  665  # debería devolver /usr/bin/microsoft-edge-stable
+  666  which microsoft-edge || which microsoft-edge-stable
+  667  ss -ltnp | grep :3000 || echo "Nada escuchando en :3000"
+  668  cd ..
+  669  mkdir curso
+  670  ll
+  671  cd curso/
+  672  cd lab01/
+  673  ll
+  674  docker run -d -p 8080:80 --name mi-contenedor httpd
+  675  docker ps
+  676  docker  stop mi-contenedor 
+  677  docker ps
+  678  docker restart mi-contenedor 
+  679  docker ps
+  680  docker rm mi-contenedor
+  681  docker stop mi-contenedor 
+  682  docker ps
+  683  docker rm mi-contenedor tenedor
+  684  docker rm mi-contenedor
+  685  docker pull nginx:1.25
+  686  docker images
+  687  docker rm -f $(docker ps -aq)
+  688  docker system prune -a --volumes
+  689  docker images
+  690  ll
+  691  ls -ltra
+  692  docker run -d -p 8080:80 --name mi-contenedor httpd
+  693  docker ps
+  694  docker ps -a
+  695  docker stop
+  696  docker stop mi-contenedor 
+  697  docker ps
+  698  docker ps -a
+  699  cls
+  700  docker restart mi-contenedor
+  701  docker ps
+  702  docker ps -a
+  703  docker restart mi-contenedor
+  704  docker ps
+  705  docker stop mi-contenedor 
+  706  dir
+  707  cd demo-vscode-edge/
+  708  npm install
+  709  npm start
+  710  cd ..
+  711  ll
+  712  cls
+  713  ls -ltr
+  714  rm -rf miweb/
+  715  ll
+  716  ls ltra
+  717  ls -ltra
+  718  rm .vscode/
+  719  ll
+  720  ls -ltr
+  721  ls -ltra
+  722  cd .vscode/
+  723  ll
+  724  cat settings.json 
+  725  cd ..
+  726  ll
+  727  cls
+  728  ll
+  729  cd codigo/
+  730  ll
+  731  cd demo-vscode-edge/
+  732  ss -ltnp | grep 3000 || echo "Nada escuchando en : 3000"
+  733  docker ps --format 'table {{.Names}}\t{{.Ports}}'
+  734  npm install
+  735  npm start
+  736  cd curso
+  737  ll
+  738  cd ..
+  739  cd  curso/
+  740  cd lab01/
+  741  ll
+  742  docker stop mi-contenedor
+  743  docker ps
+  744  docker ps -a
+  745  docker rm mi-contenedor 
+  746  docker ps -a
+  747  docker image ls httpd
+  748  docker image ls httpd:latest
+  749  docker images 
+  750  docker pull nginx:1.25
+  751  docker iamges
+  752  docker iamge
+  753  docker images
+  754  docker pull nginx:1.25
+  755  cd ..
+  756  ll
+  757  mkdir lab02
+  758  cd lab02
+  759  npm init -y
+  760  sudo shutdown -r now
+  761  sudo systemctl restart xrdp xrdp-sesman.service 
+  762  sudo systemctl restart xrdp xrdp-sesman
+  763  sudo pkill -f xrdp-chansrv
+  764  sudo apt update
+  765  sudo apt install -y xrdp xorgxrdp
+  766  sudo apt update
+  767  grep -R "packages.microsoft.com/repos/edge" -n /etc/apt/sources.list /etc/apt/sources.list.d 2>/dev/null
+  768  sudo mkdir -p ~/apt-backup
+  769  sudo cp /etc/apt/sources.list.d/*microsoft* ~/apt-backup/ 2>/dev/null || true
+  770  sudo sed -i '/packages\.microsoft\.com\/repos\/edge/ s/^/# /' /etc/apt/sources.list 2>/dev/null || true
+  771  sudo rm -f /etc/apt/sources.list.d/microsoft-edge*.list /etc/apt/sources.list.d/microsoft-edge*.sources 2>/dev/null || true
+  772  #
+  773  sudo install -m 0755 -d /etc/apt/keyrings
+  774  curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /etc/apt/keyrings/microsoft.gpg
+  775  sudo chmod 0644 /etc/apt/keyrings/microsoft.gpg
+  776  echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/edge/ stable main" | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
+  777  sudo apt update
+  778  sudo apt install -y xrdp xorgxrdp
+  779  sudo shutdown -r now
+  780  npm install express --save
+  781  cdlab02
+  782  cd lab02
+  783  npm init -y
+  784  npm install express --save
+  785  node app.js 
+  786  npm init -y
+  787  npm install express --save
+  788  node app.js 
+  789  node -v
+  790  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  791  source ~/.nvm/nvm.sh
+  792  nvm install --lts
+  793  nvm use --lts
+  794  node -v
+  795  npm -v
+  796  rm -rf node_modules package-lock.json
+  797  npm install
+  798  node app.js 
+  799  http://localhost:3000
+  800  curl -i http://localhost:3000
+  801  curl -i http://127.0.0.1:3000
+  802  lynx -dump http://localhost:3000
+  803  cd lab02
+  804  npm install express --save
+  805  node app.js 
+  806  docker build -t lab02 .
+  807  docker run -d -p 3000:3000 lab02
+  808  docker logs -f 
+  809  docker logs 
+  810  docker logs -ls
+  811  docker logs --help
+  812  docker logs -d
+  813  docker logs --details
+  814  docker logs 
+  815  docker ps
+  816  docker logs lab02
+  817  docker logs 1496
+  818  docker ps
+  819  docker logs 14964d0db602
+  820  docker logs -f 14964d0db602
+  821  lynx -dump http://localhost:3000
+  822  cd ..
+  823  cd lab04
+  824  docker volume ls
+  825  docker inspect -f '{{range .Mounts}}{{.Type}} {{.Name}} -> {{.Destination}}{{printf "\n"}}{{end}}' CONT
+  826  ls -ltr /var/lib/docker/
+  827  sudo ls -ltr /var/lib/docker/
+  828  sudo ls -ltr /var/lib/docker/volumes
+  829  sudo ls -ltr /var/lib/docker/volumes/mi-vol
+  830  sudo ls -ltr /var/lib/docker/volumes/mi-vol/_data
+  831  sudo su
+  832  cd lab02
+  833  docker ps
+  834  docker ps -a
+  835  docker start 14964d0db602
+  836  docker ps
+  837  docker logs -f 14964d0db602
+  838  cd ..
+  839  cd lab03
+  840  cd -
+  841  cd lab02
+  842  cd ../lab03
+  843  docker search node
+  844  docker pull node
+  845  docker images
+  846  docker inspect node
+  847  docker history node
+  848  docker rmi node
+  849  docker images
+  850  docker image -ls
+  851  npm init -y
+  852  npm install express --save
+  853  docker build -t nodeapp .
+  854  docker run -p 3000:3000 nodeapp
+  855  docker images 
+  856  docker build -t nodeapp .
+  857  docker run -p 3000:3000 nodeapp
+  858  ss -ltnp | grep :3000 || echo "libre"
+  859  sudo lsoft -iTCP:3000 -sTCP:LISTEN -nP
+  860  apt install lsoft
+  861  sudo apt install lsoft
+  862  sudo lsoft -iTCP:3000 -sTCP:LISTEN -nP
+  863  sudo apt install lsof
+  864  sudo lsof -iTCP:3000 -sTCP:LISTEN -nP
+  865  docker ps filter "publish=3000"
+  866  docker ps --filter "publish=3000"
+  867  docker stop 14964d0db602
+  868  docker run -p 3000:3000 nodeapp
+  869  ls -ltra
+  870  cp index.js app.js
+  871  docker run -p 3000:3000 nodeapp
+  872  docker build -t nodeapp .
+  873  docker run -p 3000:3000 nodeapp
+  874  docker build -t nodeapp .
+  875  docker rm -f nodeapp 2>/dev/null || true
+  876  docker run -p 3000:3000 nodeapp
+  877  docker images
+  878  docker ps
+  879  docker ps --filter "publish=3000"
+  880  docker stop 34aeb34e0068
+  881  docker rm 34aeb34e0068
+  882  docker ps --filter "publish=3000"
+  883  docker run -p 3000:3000 nodeapp
+  884  cd ../lab04
+  885  docker volume create my-vol
+  886  docker volume ls
+  887  docker run -it --name  mi-contenedor -v mi-vol:/data ubuntu /bin/bash
+  888  docker run -it --name  mi-contenedor1 -v mi-vol:/data ubuntu /bin/bash
+  889  docker ps
+  890  docker ps -a
+  891  docker rm d76b0d12afe7
+  892  docker rm 2776d6924be2
+  893  docker run -it --name  mi-contenedor -v mi-vol:/data ubuntu /bin/bash
+  894  docker restart mi-contenedor
+  895  docker exec -it mi-contenedor /bin/bash
+  896  docker  start -ai mi-contenedor
+  897  cd ../lab05
+  898  docker run -d -p 8080:80 --name mi-nginx nginx
+  899  docker ps
+  900  docker port mi-nginx 
+  901  docker ps
+  902  docker network ls
+  903  ocker network create --driver bridge mi-red-bridge
+  904  docker network ls
+  905  docker network create --driver bridge mi-red-bridge
+  906  docker network ls
+  907  docker network inspect bridge
+  908  docker run -d -p 9090:80 --name mi-nginx-bridge --network mi-red-bridge nginx
+  909  cd ../lab06
+  910  npm init -y
+  911  npm install express
+  912  docker compose up
+  913  0
+  914  docker compose up
+  915  cd paso/
+  916  ll
+  917  kubectl apply -f pod.yaml 
+  918  sudo kubectl apply -f pod.yaml 
+  919  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  920  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  921  minikube start --driver=docker
+  922  df -h
+  923  minikube delete --all --purge
+  924  minikube start --driver=docker --cpus=2 --memory=4096 --wait=all --wait-timeout=8m
+  925  minikube status
+  926  kubectl cluster-info
+  927  kubectl get nodes
+  928  kubectl wait --for=condition=Ready node/minikube --timeout=120s
+  929  unset KUBECONFIG
+  930  minikube delete --all --purge
+  931  docker rm -f $(docker ps -aq -f name=minikube) 2>/dev/null || true
+  932  docker network rm minikube 2>/dev/null || true
+  933  docker volume rm $(docker volume ls -q | grep minikube) 2>/dev/null || true
+  934  minikube start --driver=docker --cpus=2 --memory=2048   --wait=apiserver,system_pods,default_sa,node --wait-timeout=6m   --addons=default-storageclass,storage-provisioner
+  935  kubectl config current-context      # debe decir "minikube"
+  936  kubectl get nodes                   # debe mostrar el nodo "minikube" Ready
+  937  kubectl get pods -A                 # debe listar pods del sistema
+  938  kubectl apply -f pod.yaml
+  939  kubectl apply -f nginx-service.yaml 
+  940  kubectl get serice nginx-service
+  941  kubectl get sevice nginx-service
+  942  kubectl get service nginx-service
+  943  kubectl get pod nginx-pod -o wide
+  944  minikube service nginx-service --url
+  945  kubectl apply -f pod.yaml
+  946  kubectl get service nginx-service
+  947  minikube ip
+  948  kubectl apply -f nginx-service.yaml 
+  949  minikube ip
+  950  curl -I http://$(minikube ip):30080
+  951  sudo ufw allow 30080/tcp
+  952  cd paso2
+  953  npm init -y
+  954  npm install express
+  955  docker build -t xnando2019/netec_docker_repo:v12 .
+  956  pwd
+  957  ls -la
+  958  vi Dockerfile
+  959  ls -la
+  960  docker build -t xnando2019/netec_docker_repo:v12 .
+  961  vi deployment.yaml
+  962  kubctl apply -f deployment.yaml 
+  963  kubectl apply -f deployment.yaml 
+  964  minikube start --driver=doker
+  965  minikube start --driver=docker
+  966  minukube update-context
+  967  minikube update-context
+  968  kubectl apply -f deployment.yaml 
+  969  vi service.yaml
+  970  kubectl apply -f service.yaml 
+  971  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  972  vi ingress-rule.yaml
+  973  kubectl -n ingress-nginx get pods
+  974  kubectl apply -f ingress-rule.yaml 
+  975  kubectl -n ingress-nginx get pods
+  976  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  977  kubectl -n ingress-nginx get pods
+  978  docker push xnando2019/netec_docker_repo:v12 .
+  979  docker push xnando2019/netec_docker_repo:v12
+  980  kubectl apply -f service.yaml 
+  981  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  982  kubectl -n ingress-nginx get pods
+  983  kubectl apply -f ingress-rule.yaml 
+  984  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  985  kubectl -n ingress-nginx get pods
+  986  docker build -t xnando2019/netec_docker_repo:v12.
+  987  docker build -t xnando2019/netec_docker_repo:v12 .
+  988  docker login
+  989  docker push xnando2019/netec_docker_repo:v12
+  990  kubectl apply -f deployment.yaml 
+  991  kubectl apply -f service.yaml 
+  992  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  993  kubectl apply -f ingress-rule.yaml 
+  994  kubectl get pods -o wide
+  995  kubectl get svc practica12
+  996  kubectl -n ingress-nginx get pods
+  997  kubectl get ingress practica12-ingress
+  998  MINIip=$(minikube ip)
+  999  echo "$MINIIP practica12.example.com" | sudo tee -a /etc/hosts
+ 1000  curl -i http://practica12.example.com/
+ 1001  curl -i http://practica12.example.com
+ 1002  curl -i http://practica12.example.com/
+ 1003  MINIIp=$(minikube ip)
+ 1004  echo "$MINIIP practica12.example.com" | sudo tee -a /etc/hosts
+ 1005  curl -i http://practica12.example.com/
+ 1006  grep practica12 /etc/hosts
+ 1007  curl -i http://practica12.example.com/
+ 1008  sudo sed -i '/practica12\.example\.com/d' /etc/hosts
+ 1009  sudo sed -i '/practical2\.example\.com/d' /etc/hosts
+ 1010  sudo sed -i '/practica12\.example\.com/d' /etc/hosts
+ 1011  sudo sed -i '/practical2\.example\.com/d' /etc/hosts
+ 1012  sudo sed -i '/practica12\.example\.com/d' /etc/hosts
+ 1013  IP=$(minikube ip)
+ 1014  echo "$IP practica12.example.com" | sudo tee -a /etc/hosts
+ 1015  grep practica12 /etc/hosts
+ 1016  curl -i http://practica12.example.com/
+ 1017  curl -i -H "Host: practica12.example.com" "http://$(minikube ip)/"
+ 1018  kubectl get ingress practica12-ingress
+ 1019  kubectl -n ingress-nginx get pods
+ 1020  kubectl get endpoints practica12
+ 1021  kubectl get ingress practica12-ingress
+ 1022  kubectl -n ingress-nginx get pods
+ 1023  kubectl get endpoints practica12
+ 1024  kubectl -n ingress-nginx get svc ingress-nginx-controller -o wide
+ 1025  kubectl -n ingress-nginx get svc ingress-nginx-controller   -o jsonpath='{.spec.ports[?(@.port==80)].nodePort}{"\n"}'
+ 1026  NP=$(kubectl -n ingress-nginx get svc ingress-nginx-controller \
+ 1027    -o jsonpath='{.spec.ports[?(@.port==80)].nodePort}')
+ 1028  curl -i -H "Host: practica12.example.com" "http://$(minikube ip):$NP/"
+ 1029  kubectl get pods .l app=practica12 -o wide
+ 1030  kubectl get pods -l app=practica12 -o wide
+ 1031  kubctl logs -l app=practica12 --tail=50
+ 1032  kubectl logs -l app=practica12 --tail=15
+ 1033  docker build -t xnando2019/netec_docker_repo:v12 .
+ 1034  docker push xnando2019/netec_docker_repo:v12
+ 1035  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1036  kubectl -n ingress-nginx get pods
+ 1037  curl -i http://practica12.example.com
+ 1038  curl -i http://practica12.example.com/
+ 1039  cd lab077
+ 1040  cd lab07
+ 1041  npm init -y
+ 1042  npm install express
+ 1043  touch index.js
+ 1044  touch Dockerfile
+ 1045  docker build -t xnando2019/netec_docker_repo .
+ 1046  docker images
+ 1047  docker rm -f $(docker ps -aq) 2>/dev/null
+ 1048  docker rmi -f $(docker images -aq) 2>/dev/null
+ 1049  docker volume rm $(docker volume ls -q) 2>/dev/null
+ 1050  docker network rm $(docker network ls --filter type=custom -q) 2>/dev/null
+ 1051  docker builder prune -a -f
+ 1052  docker system prune -a --volumes -f
+ 1053  docker images
+ 1054  docker build -t xnando2019/netec_docker_repo .
+ 1055  cd lab07
+ 1056  docker build -t xnando2019/netec_docker_repo .
+ 1057  docker images
+ 1058  docker push xnando2019/netec_docker_repo
+ 1059  xnando2019/netec_docker_repo
+ 1060  docker run -d -p 3000:3000 xnando2019/netec_docker_repo
+ 1061  touch deployment.yaml
+ 1062  kubctl apply -f deployment.yaml 
+ 1063  kubectl apply -f deployment.yaml 
+ 1064  kubectl config current-context
+ 1065  kubectl config view --minify | grep server
+ 1066  minikube status || true
+ 1067  minikube start --driver=docker 
+ 1068  minikube update-context
+ 1069  kubectl cluster-info
+ 1070  kubectl get nodes
+ 1071  kubectl apply -f deployment.yaml
+ 1072  kubectl expose deployment mi-aplicacion-node --type=LoadBalancer --port=3000
+ 1073  kubectl get svc
+ 1074  kubectl get pods
+ 1075  cd ..
+ 1076  mkdir lab08
+ 1077  cd lab08
+ 1078  npm init -y
+ 1079  touch  index.js
+ 1080  npm install express
+ 1081  touch Dockerfile
+ 1082  docker build -t xnando2019/netec_docker_repo:v1 .
+ 1083  docker push xnando2019/netec_docker_repo:v1
+ 1084  touch namespace.yaml
+ 1085  kubectl apply -f namespace.yaml 
+ 1086  touch deployment.yaml
+ 1087  kubectl apply -f deployment.yaml 
+ 1088  touch replicateset.yaml 
+ 1089  kubectl -f replicateset.yaml 
+ 1090  kubectl -f replicateset.yaml apply
+ 1091  touch statefulset.yaml
+ 1092  kubectl -f statefulset.yaml apply
+ 1093  touch daemonset.yaml
+ 1094  kubectl -f daemonset.yaml apply
+ 1095  kubectl get all -n mi-namesspace
+ 1096  kubectl get all -n mi-namespace
+ 1097  cd ../lab09
+ 1098  touch pod1.yaml
+ 1099  kubectl apply -f pod1.yaml 
+ 1100  kubectl get pods --show labels
+ 1101  kubectl get pods --show-labels
+ 1102  kubectl get pods-l app=myapp
+ 1103  kubectl get pods -l app=myapp
+ 1104  kubectl get pods -l app=myapp,env=development --show-labels
+ 1105  kubectl get pods -l 'env!=production'
+ 1106  touch lab10
+ 1107  cd ../lab10
+ 1108  ll
+ 1109  rm lab10 
+ 1110  cd ../lab10
+ 1111  touch emptydir-pod.yaml
+ 1112  kubectl apply -f emptydir-pod.yaml 
+ 1113  kubectl exec -it mypod -c mycontainer1 -- /bin/sh
+ 1114  kubectl exec -it mypod -c mycontainer2 -- /bin/sh
+ 1115  ls
+ 1116  kubectl exec -it mypod -c mycontainer2 -- /bin/sh
+ 1117  kubectl get pod mypod -o wide
+ 1118  kubectl exec -it mypod -c mycontainer2 -- /bin/sh
+ 1119  exit
+ 1120  minikube tunnel 
+ 1121  cd lab10
+ 1122  kubectl exec -it mypod -c mycontainer1 -- /bin/sh
+ 1123  kubectl apply -f emptydir-pod.yaml
+ 1124  kubectl apply -f emptydir-pod.yaml 
+ 1125  kubectl config current-context
+ 1126  kubectl config get-contexts
+ 1127  minikube status
+ 1128  minikube start --driver=docker
+ 1129  minikube update-context
+ 1130  kubectl apply -f emptydir-pod.yaml 
+ 1131  kubectl exec -it mypod -c mycontainer1 -- /bin/sh
+ 1132  kubectl delete pop mypod
+ 1133  kubectl delete pod mypod
+ 1134  cd ..
+ 1135  cd lab11/
+ 1136  touch pod.yaml
+ 1137  kubctl apply -f pod.yaml
+ 1138  kubectl apply -f pod.yaml
+ 1139  touch nginx-service.yaml
+ 1140  kubectl apply -f nginx-service.yaml 
+ 1141  kubectl get service nginx-service
+ 1142  cd ../lab12
+ 1143  npm init -y
+ 1144  npm install express
+ 1145  touch index.js
+ 1146  touch Dockerfile
+ 1147  docker build -t xnando2019/netec_docker_repo:v12 . 
+ 1148  docker push xnando2019/netec_docker_repo:v12
+ 1149  touch deployment.yaml
+ 1150  kubectl apply -f deployment.yaml
+ 1151  touch service.yaml
+ 1152  kubectl apply -f service.yaml
+ 1153  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1154  touch ingress-rules.yaml
+ 1155  kubectl apply -f ingress-rules.yaml
+ 1156  kubectl -n ingress-nginx get pods
+ 1157  lynx -I dump http://practica12.example.com/
+ 1158  lynx  http://practica12.example.com/
+ 1159  kubectl -n ingress-nginx get jobs
+ 1160  kubectl -n ingress-nginx get svc ingress-nginx-controller-admission
+ 1161  kubectl get validatingwebhookconfigurations.admissionregistration.k8s.io   | grep ingress-nginx
+ 1162  kubectl -n ingress-nginx get secret | grep admission
+ 1163  kubectl -n ingress-nginx get svc ingress-nginx-controller
+ 1164  kubectl get ingress practica12-ingress -o wide
+ 1165  kubectl describe ingress practica12-ingress
+ 1166  kubectl get endpoints practica12
+ 1167  curl -H "Host: practica12.example.com" http://10.244.0.20:3000/
+ 1168  curl -H "Host: practica12.example.com" http://10.244.0.29:3000/
+ 1169  kubectl -n ingress-nginx get svc ingress-nginx-controller -o wide
+ 1170  curl -H "Host: practica12.example.com" http://10.104.87.208
+ 1171  lynx -I DUMP http://10.104.87.208
+ 1172  lynx -I -dump http://10.104.87.208
+ 1173  lynx -dump http://10.104.87.208
+ 1174  kubectl get ingress -o jsonpath='{.items[0].spec.rules[0].host}{"\n"}'
+ 1175  kubectl -n ingress-nginx get svc ingress-nginx-controller   -o jsonpath='{.status.loadBalancer.ingress[0].ip}{"\n"}'
+ 1176  kubectl -n ingress-nginx get svc ingress-nginx-controller -o wide
+ 1177  lynx -dump http://10.104.87.208
+ 1178  lynx -dump http://practica12.example.com
+ 1179  curl -H "Host: practical2.example.com" http://10.104.87.208/
+ 1180  echo "10.104.87.208 practical2.example.com" | sudo tee -a /etc/hosts
+ 1181  lynx -dump http://practical2.example.com/
+ 1182  kubectl describe ingress practical2-ingress
+ 1183  kubectl get endpoints practica12
+ 1184  kubectl -n ingress-nginx logs deploy/ingress-nginx-controller --tail=100 | grep practical2
+ 1185  kubectl get ingress -A
+ 1186  kubectl get ingress -o wide
+ 1187  kubectl get ingress -o jsonpath='{range .items[*]}{.metadata.name}{"  ->  "}{.spec.rules[0].host}{"\n"}{end}'
+ 1188  kubectl describe ingress practica12-ingress 
+ 1189  practica12-ingress 
+ 1190  kubectl get ingressclass
+ 1191  kubectl -n ingress-nginx get pods
+ 1192  minikube status
+ 1193  minikube start --driver=docker
+ 1194  minikube status
+ 1195  kubectl config current-context
+ 1196  kubectl config get-contexts
+ 1197  minikube delete
+ 1198  minikube start --driver=docker
+ 1199  kubectl cluster-info
+ 1200  kubectl get nodes
+ 1201  kubectl -n ingress-nginx get pods
+ 1202  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1203  kubectl get pods --all-namespaces
+ 1204  kubectl -n ingress-nginx get pods
+ 1205  minikube addons list
+ 1206  minikube addons enable ingress
+ 1207  kubectl -n ingress-nginx get pods
+ 1208  cd lab12
+ 1209  kubectl -n ingress-nginx get pods
+ 1210  cd ../lab13
+ 1211  gradle wrapper
+ 1212  sudo gradle wrapper
+ 1213  gradle wrapper
+ 1214  sudo apt-get install gradle
+ 1215  ./gradlew clean build
+ 1216  ll
+ 1217  ls -ltra
+ 1218  gradle clean build
+ 1219  ls -la
+ 1220  cd ~/curso/lab13
+ 1221  gradle init   --type java-application   --dsl groovy   --test-framework junit-jupiter   --project-name lab13   --package com.example.lab13
+ 1222  # usar el wrapper generado:
+ 1223  ./gradlew clean build run
+ 1224  mkdir -p src/main/java/com/example/lab13
+ 1225  mkdir -p src/test/java/com/example/lab13
+ 1226  # 3) settings.gradle
+ 1227  cat > settings.gradle <<'EOF'
+ 1228  rootProject.name = 'lab13'
+ 1229  EOF
+ 1230  # 4) build.gradle (Groovy DSL)
+ 1231  cat > build.gradle <<'EOF'
+ 1232  plugins {
+ 1233      id 'java'
+ 1234      id 'application'
+ 1235  }
+ 1236  repositories {
+ 1237      mavenCentral()
+ 1238  }
+ 1239  dependencies {
+ 1240      testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+ 1241  }
+ 1242  application {
+ 1243      // Clase con método main
+ 1244      mainClass = 'com.example.lab13.App'
+ 1245  }
+ 1246  tasks.withType(Test) {
+ 1247      useJUnitPlatform()
+ 1248  }
+ 1249  EOF
+ 1250  cat > src/main/java/com/example/lab13/App.java <<'EOF'
+ 1251  package com.example.lab13;
+ 1252  public class App {
+ 1253      public static void main(String[] args) {
+ 1254          System.out.println("Hola desde lab13!");
+ 1255      }
+ 1256  }
+ 1257  EOF
+ 1258  # 6) (Opcional) Test básico para verificar JUnit
+ 1259  cat > src/test/java/com/example/lab13/AppTest.java <<'EOF'
+ 1260  package com.example.lab13;
+ 1261  import static org.junit.jupiter.api.Assertions.assertTrue;
+ 1262  import org.junit.jupiter.api.Test;
+ 1263  public class AppTest {
+ 1264      @Test
+ 1265      void alwaysTrue() {
+ 1266          assertTrue(true);
+ 1267      }
+ 1268  }
+ 1269  EOF
+ 1270  gradle wrapper
+ 1271  cat > build.gradle <<'EOF'
+ 1272  apply plugin: 'java'
+ 1273  apply plugin: 'application'
+ 1274  repositories {
+ 1275      mavenCentral()
+ 1276  }
+ 1277  dependencies {
+ 1278      // Usa JUnit 4 para máxima compatibilidad con Gradle viejo
+ 1279      testImplementation 'junit:junit:4.13.2'
+ 1280  }
+ 1281  test {
+ 1282      useJUnit()  // JUnit 4
+ 1283  }
+ 1284  mainClassName = 'com.example.lab13.App'
+ 1285  EOF
+ 1286  gradle wrapper
+ 1287  ./gradlew clean build
+ 1288  ./gradlew run
+ 1289  cat gradle/wrapper/gradle-wrapper.properties
+ 1290  # 2) Actualiza la URL del distribution a Gradle 7.6.4
+ 1291  sed -i 's#^distributionUrl=.*#distributionUrl=https\\://services.gradle.org/distributions/gradle-7.6.4-bin.zip#' gradle/wrapper/gradle-wrapper.properties
+ 1292  # 3) Verifica que quedó bien
+ 1293  grep distributionUrl gradle/wrapper/gradle-wrapper.properties
+ 1294  # 4) Fuerza a que el wrapper descargue y use 7.6.4
+ 1295  ./gradlew --version
+ 1296  # 5) Compila y ejecuta
+ 1297  ./gradlew clean build
+ 1298  ./gradlew run
+ 1299  cat > src/test/java/com/example/lab13/AppTest.java <<'EOF'
+ 1300  package com.example.lab13;
+ 1301  import org.junit.Test;
+ 1302  import static org.junit.Assert.assertTrue;
+ 1303  public class AppTest {
+ 1304      @Test
+ 1305      public void alwaysTrue() {
+ 1306          assertTrue(true);
+ 1307      }
+ 1308  }
+ 1309  EOF
+ 1310  ./gradlew clean build
+ 1311  ll
+ 1312  ls -ltr build/libs
+ 1313  cd lab01
+ 1314  cd ..
+ 1315  cd lab01
+ 1316  sudo apt update
+ 1317  sudo apt install libreoffice libreoffice-gtk3
+ 1318  sudo snap install onlyoffice-desktopeditors
+ 1319  kubectl delete all --all -A
+ 1320  kubectl config get-clusters
+ 1321  kubectl config current-context
+ 1322  kubectl config get-contexts
+ 1323  exit
+ 1324  dbeaver
+ 1325  sudo apt update
+ 1326  sudo apt install dbeaver-ce -y
+ 1327  sudo apt update
+ 1328  sudo apt install dbeaver-ce -y
+ 1329  sudo snap install dbeaver-ce
+ 1330  dbeaver-ce 
+ 1331  exit
+ 1332  kubectl get secret mysql-secret -n medical-app -o jsonpath="{.data.mysql-root-password}" | base64 --decode
+ 1333  kubectl get pods -n medical-app
+ 1334  kubectl describe pod -n medical-app -l app=medical-backend
+ 1335  kubectl logs -n medical-app -l app=medical-backend
+ 1336  kubectl get nodes
+ 1337  kubectl label node minikube tier-backend=true
+ 1338  kubectl get nodes --show-labels
+ 1339  kubectl logs -n medical-app -l app=medical-backend --tail=100 -f
+ 1340  kubectl delete pod -n medical-app -l app=medical-backend && \
+ 1341  # 1. Borrar pods viejos del backend
+ 1342  kubectl delete pod -n medical-app -l app=medical-backend && kubectl get pods -n medical-app -l app=medical-backend -w &
+ 1343  WATCH_PID=$!; \
+ 1344  # 3. Apenas aparezca un nuevo pod, seguir sus logs
+ 1345  sleep 5 && kubectl logs -n medical-app -l app=medical-backend -f; \
+ 1346  # 4. Cuando termines, puedes detener el watch
+ 1347  kill $WATCH_PID
+ 1348  kubectl get deployment contact-backend -n medical-app -o yaml | grep -A3 image:
+ 1349  kubectl delete pod -n medical-app -l app=medical-backend
+ 1350  kubectl get pods -n medical-app -w
+ 1351  exit
+ 1352  kubectl describe svc medical-backend -n medical-app
+ 1353  cd k8s/
+ 1354  cp backend-service.yaml backend-service.yaml-bk
+ 1355  exit
+ 1356  dbeaver-ce 
+ 1357  clear
+ 1358  kubectl apply -f k8s/backend-deployment.yaml
+ 1359  kubectl delete pod -n medical-app -l app=medical-backend
+ 1360  exit
+ 1361  kubectl get pods -n medical-app -l app=medical-backend
+ 1362  kubectl logs -n medical-app -l app=medical-backend -f
+ 1363  cls
+ 1364  clar
+ 1365  clear
+ 1366  kubectl logs -n medical-app -l app=medical-backend -f
+ 1367  exit
+ 1368  kubectl exec -it -n medical-app <mysql-pod-name> -- mysql -u root -p db_medical
+ 1369  kubectl exec -it -n medical-app mysql-medical-7d4f8bcff8-q7vpt -- mysql -u root -p db_medical
+ 1370  cd ..
+ 1371  ls -ltra
+ 1372  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1373  kubectl -n ingress-nginx get pods -w
+ 1374  kubectl apply -f k8s/ingress.yaml
+ 1375  kubectl get ingress -n medical-app
+ 1376  kubectl describe ingress medical-ingress -n medical-app | sed -n '1,120p'
+ 1377  cat /etc/hosts
+ 1378  sudo echo "127.0.0.1   medical.local" >> /etc/hosts
+ 1379  sudo /etc/hosts
+ 1380  sudo vi /etc/hosts
+ 1381  cat /etc/hosts
+ 1382  ping medical.local
+ 1383  vi /etc/hosts
+ 1384  sudo vi /etc/hosts
+ 1385  ping medical.local
+ 1386  sudo systemctl stop apache2
+ 1387  sudo systemctl disable apache2
+ 1388  kubectl -n ingress-nginx get svc ingress-nginx-controller
+ 1389  curl -I -H "Host: medical.local" http://127.0.0.1:32583/
+ 1390  curl -I -H "Host: medical.local" http://127.0.0.1:32583/api/swagger-ui/index.html
+ 1391  kubectl -n ingress-nginx patch deploy ingress-nginx-controller   --type='json'   -p='[
+    {"op":"add","path":"/spec/template/spec/hostNetwork","value":true},
+    {"op":"add","path":"/spec/template/spec/dnsPolicy","value":"ClusterFirstWithHostNet"}
+  ]'
+ 1392  kubectl -n ingress-nginx patch svc ingress-nginx-controller -p '{"spec":{"type":"ClusterIP"}}'
+ 1393  kubectl -n ingress-nginx rollout status deploy/ingress-nginx-controller
+ 1394  kubectl -n ingress-nginx get pods -o wide
+ 1395  curl -I -H "Host: medical.local" http://127.0.0.1/
+ 1396  curl -I -H "Host: medical.local" http://127.0.0.1/api/swagger-ui/index.html
+ 1397  kubectl get ingress -n medical-app
+ 1398  kubectl describe ingress medical-ingress -n medical-app | sed -n '1,120p'
+ 1399  kubectl -n ingress-nginx logs deploy/ingress-nginx-controller --tail=200
+ 1400  kubectl get svc,deploy,pod -n medical-app -o wide
+ 1401  Preguntar a ChatGPT
+ 1402  ubuntu@ip-172-31-91-229:~/curso/proyecto$ curl -I -H "Host: medical.local" http://127.0.0.1/
+ 1403  curl: (7) Failed to connect to 127.0.0.1 port 80 after 0 ms: Connection refused
+ 1404  ubuntu@ip-172-31-91-229:~/curso/proyecto$ curl -I -H "Host: medical.local" http://127.0.0.1/api/swagger-ui/index.html
+ 1405  curl: (7) Failed to connect to 127.0.0.1 port 80 after 0 ms: Connection refused
+ 1406  ubuntu@ip-172-31-91-229:~/curso/proyecto$ 
+ 1407  ubuntu@ip-172-31-91-229:~/curso/proyecto$ kubectl get ingress -n medical-app
+ 1408  NAME              CLASS   HOSTS           ADDRESS          PORTS   AGE
+ 1409  medical-ingress   nginx   medical.local   10.107.196.181   80      19m
+ 1410  ubuntu@ip-172-31-91-229:~/curso/proyecto$ kubectl describe ingress medical-ingress -n medical-app | sed -n '1,120p'
+ 1411  Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
+ 1412  Name:             medical-ingress
+ 1413  Labels:           <none>
+ 1414  Namespace:        medical-app
+ 1415  Address:          10.107.196.181
+ 1416  Ingress Class:    nginx
+ 1417  Default backend:  <default>
+ 1418  Rules:
+ 1419  Annotations:     nginx.ingress.kubernetes.io/rewrite-target: /$2
+ 1420  Events:
+ 1421  ubuntu@ip-172-31-91-229:~/curso/proyecto$ kubectl -n ingress-nginx logs deploy/ingress-nginx-controller --tail=200
+ 1422  -------------------------------------------------------------------------------
+ 1423  NGINX Ingress controller
+ 1424  -------------------------------------------------------------------------------
+ 1425  W0829 20:31:16.657771       7 client_config.go:667] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+ 1426  I0829 20:31:16.657933       7 main.go:205] "Creating API client" host="https://10.96.0.1:443"
+ 1427  I0829 20:31:16.665822       7 main.go:248] "Running in Kubernetes cluster" major="1" minor="33" git="v1.33.1" state="clean" commit="8adc0f041b8e7ad1d30e29cc59c6ae7a15e19828" platform="linux/amd64"
+ 1428  I0829 20:31:16.763408       7 main.go:101] "SSL fake certificate created" file="/etc/ingress-controller/ssl/default-fake-certificate.pem"
+ 1429  I0829 20:31:16.771977       7 ssl.go:535] "loading tls certificate" path="/usr/local/certificates/cert" key="/usr/local/certificates/key"
+ 1430  I0829 20:31:16.779382       7 nginx.go:273] "Starting NGINX Ingress controller"
+ 1431  I0829 20:31:16.784182       7 event.go:377] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"ingress-nginx", Name:"ingress-nginx-controller", UID:"b80afa63-1e6b-43cd-91dd-3c059e2d6707", APIVersion:"v1", ResourceVersion:"110261", FieldPath:""}): type: 'Normal' reason: 'CREATE' ConfigMap ingress-nginx/ingress-nginx-controller
+ 1432  I0829 20:31:17.882080       7 store.go:443] "Found valid IngressClass" ingress="medical-app/medical-ingress" ingressclass="nginx"
+ 1433  I0829 20:31:17.882330       7 event.go:377] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"medical-app", Name:"medical-ingress", UID:"9c5049de-0364-41ea-bb7a-8dbdae35a0bb", APIVersion:"networking.k8s.io/v1", ResourceVersion:"112029", FieldPath:""}): type: 'Normal' reason: 'Sync' Scheduled for sync
+ 1434  I0829 20:31:17.980718       7 nginx.go:319] "Starting NGINX process"
+ 1435  I0829 20:31:17.980800       7 leaderelection.go:257] attempting to acquire leader lease ingress-nginx/ingress-nginx-leader...
+ 1436  I0829 20:31:17.981463       7 nginx.go:339] "Starting validation webhook" address=":8443" certPath="/usr/local/certificates/cert" keyPath="/usr/local/certificates/key"
+ 1437  E0829 20:31:17.981752       7 nginx.go:342] "Error listening for TLS connections" err="listen tcp :8443: bind: address already in use"
+ 1438  I0829 20:31:17.982824       7 controller.go:214] "Configuration changes detected, backend reload required"
+ 1439  I0829 20:31:17.986500       7 status.go:85] "New leader elected" identity="ingress-nginx-controller-5bb8b5db5c-5rsq2"
+ 1440  I0829 20:31:18.038233       7 controller.go:228] "Backend successfully reloaded"
+ 1441  I0829 20:31:18.038334       7 controller.go:240] "Initial sync, sleeping for 1 second"
+ 1442  I0829 20:31:18.038503       7 event.go:377] Event(v1.ObjectReference{Kind:"Pod", Namespace:"ingress-nginx", Name:"ingress-nginx-controller-7dbfcd6d4f-99tt2", UID:"c281a583-c32a-4b66-a0b4-d3d79b99827c", APIVersion:"v1", ResourceVersion:"113043", FieldPath:""}): type: 'Normal' reason: 'RELOAD' NGINX reload triggered due to a change in configuration
+ 1443  I0829 20:32:04.930474       7 leaderelection.go:271] successfully acquired lease ingress-nginx/ingress-nginx-leader
+ 1444  I0829 20:32:04.930608       7 status.go:85] "New leader elected" identity="ingress-nginx-controller-7dbfcd6d4f-99tt2"
+ 1445  I0829 20:32:04.934563       7 status.go:309] "updating Ingress status" namespace="medical-app" ingress="medical-ingress" currentValue=null newValue=[{"ip":"10.107.196.181"}]
+ 1446  I0829 20:32:04.938221       7 event.go:377] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"medical-app", Name:"medical-ingress", UID:"9c5049de-0364-41ea-bb7a-8dbdae35a0bb", APIVersion:"networking.k8s.io/v1", ResourceVersion:"113124", FieldPath:""}): type: 'Normal' reason: 'Sync' Scheduled for sync
+ 1447  ubuntu@ip-172-31-91-229:~/curso/proyecto$ kubectl get svc,deploy,pod -n medical-app -o wide
+ 1448  Preguntar a ChatGPT
+ 1449  NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR
+ 1450  service/medical-backend    ClusterIP   10.105.55.136   <none>        8080/TCP   38h   app=medical-backend
+ 1451  service/medical-frontend   ClusterIP   10.106.159.89   <none>        3000/TCP   37h   app=medical-frontend
+ 1452  service/mysql              ClusterIP   10.97.160.61    <none>        3306/TCP   38h   app=mysql-medical
+ 1453  NAME                               READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS         IMAGES                                 SELECTOR
+ 1454  deployment.apps/contact-backend    1/1     1            1           38h   medical-backend    xnando2019/ms-medical-backend:latest   app=medical-backend
+ 1455  deployment.apps/medical-frontend   1/1     1            1           37h   medical-frontend   medical-frontend:latest                app=medical-frontend
+ 1456  deployment.apps/mysql-medical      1/1     1            1           38h   mysql-medical      mysql:5.7                              app=mysql-medical
+ 1457  NAME                                    READY   STATUS    RESTARTS      AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+ 1458  pod/contact-backend-66f5fc5786-fkzfl    1/1     Running   0             37h   10.244.0.15   minikube   <none>           <none>
+ 1459  pod/medical-frontend-7565ccc6b9-ptkjz   1/1     Running   0             28h   10.244.0.19   minikube   <none>           <none>
+ 1460  pod/mysql-client                        1/1     Running   1 (38h ago)   38h   10.244.0.11   minikube   <none>           <none>
+ 1461  pod/mysql-medical-7d4f8bcff8-q7vpt      1/1     Running   0             38h   10.244.0.9    minikube   <none>           <none>
+ 1462* 
+ 1463  ubuntu@ip-172-31-91-229:~/curso/proyecto$ 
+ 1464  minikube ip
+ 1465  sudo vi /etc/hosts
+ 1466  curl -I -H "Host: medical.local" http://medical.local/
+ 1467  curl -s -H "Host: medical.local" http://medical.local/api/v3/api-docs | head
+ 1468  kubectl apply -f k8s/ingress-backend.yaml
+ 1469  kubectl apply -f k8s/ingress-frontend.yaml
+ 1470  kubectl -n ingress-nginx patch deploy ingress-nginx-controller   -p '{"spec":{"template":{"spec":{"hostNetwork":false,"dnsPolicy":"ClusterFirst"}}}}'
+ 1471  kubectl -n ingress-nginx patch svc ingress-nginx-controller -p '{"spec":{"type":"LoadBalancer"}}'
+ 1472  kubectl -n ingress-nginx rollout status deploy/ingress-nginx-controller
+ 1473  kubectl -n ingress-nginx get pods -o wide
+ 1474  sudo minikube tunnel
+ 1475  kubectl -n ingress-nginx get svc ingress-nginx-controller -o wide
+ 1476  kubectl apply -f k8s/ingress-backend.yaml
+ 1477  kubectl apply -f k8s/ingress-frontend.yaml
+ 1478  kubectl get ingress -n medical-app
+ 1479  kubectl -n medical-app get ingress
+ 1480  kubectl -n medical-app delete ingress medical-ingress
+ 1481  kubectl apply -f k8s/ingress-backend.yaml -f k8s/ingress-frontend.yaml
+ 1482  kubectl get ingress -n medical-app
+ 1483  cat /etc/hosts
+ 1484  vi cat /etc/hosts
+ 1485  sudo vi  /etc/hosts
+ 1486* 
+ 1487  curl -I -H "Host: medical.local" http://127.0.0.1:31290/
+ 1488  curl -I -H "Host: medical.local" http://127.0.0.1:31290/api/swagger-ui/index.html
+ 1489  kubectl get nodes -o wide
+ 1490  kubectl -n ingress-nginx get svc ingress-nginx-controller   -o jsonpath='{.spec.ports[?(@.port==80)].nodePort}'; echo
+ 1491  sudo vi  /etc/hosts
+ 1492  curl -I -H "Host: medical.local" http://medical.local:31290
+ 1493  kubectl get nodes -o wide
+ 1494  kubectl -n ingress-nginx get svc ingress-nginx-controller -o wide
+ 1495  kubectl get ingress -n medical-app
+ 1496  Preguntar a ChatGPT
+ 1497  kubectl get ingress -n medical-app
+ 1498  curl -i -H "Host: medical.local" "http://medical.local:31290/api/v1/doctors"
+ 1499  curl -i -H "Host: medical.local" "http://medical.local:31290/api/v3/api-docs"
+ 1500  curl -i -H "Host: medical.local" "http://medical.local:31290/api/v2/api-docs"
+ 1501  kubectl -n medical-app delete ingress medical-ingress-backend medical-ingress-frontend --ignore-not-found=true
+ 1502  kubectl apply -f k8s/ingress.yaml
+ 1503  kubectl get ingress -n medical-app
+ 1504  kubectl get nodes -o wide
+ 1505  cat /etc/hosts
+ 1506  curl -I -H "Host: medical.local" http://medical.local:31290/
+ 1507  curl -I -H "Host: medical.local" http://medical.local:31290/api/v1/doctors
+ 1508  curl -I -H "Host: medical.local" http://medical.local:31290/api/swagger-ui/index.html
+ 1509  kubectl -n medical-app logs deploy/medical-frontend --tail=100
+ 1510  kubectl -n medical-app logs deploy/contact-backend --tail=100
+ 1511  curl -i -H "Host: medical.local" http://medical.local:31290/api/v1/doctors
+ 1512  kubectl -n medical-app apply -f k8s/ingress.yaml
+ 1513  kubectl -n medical-app get ingress
+ 1514  curl -i -H "Host: medical.local" http://medical.local:31290/api/v1/doctors
+ 1515  curl -I -H "Host: medical.local" http://medical.local:31290/api/swagger-ui/index.html
+ 1516  kubectl -n medical-app describe ingress medical-ingress | sed -n '1,160p'
+ 1517  kubectl -n medical-app get svc,deploy,pod -o wide
+ 1518  kubectl -n ingress-nginx logs deploy/ingress-nginx-controller --tail=120
+ 1519  Preguntar a ChatGPT
+ 1520  kubectl -n medical-app port-forward svc/medical-backend 8080:8080
+ 1521  kubectl get service -n medical-app
+ 1522  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1523  kubectl get pods -n ingress-nginx
+ 1524  sudo cat /etc/hosts
+ 1525  sudo vi /etc/hosts
+ 1526  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+ 1527  kubectl get pods -n ingress-nginx
+ 1528  kubectl get svc -n ingress-nginx
+ 1529  kubectl apply -f k8s/ingress-nginx-nodeport.yaml
+ 1530  kubectl get svc -n ingress-nginx
+ 1531  kubectl apply -f k8s/ingress-main.yaml
+ 1532  kubectl describe ingress medical-ingress-main -n medical-app
+ 1533  kubectl logs deploy/medical-backend -n medical-app | grep Started
+ 1534  kubectl port-forward svc/medical-backend 8080:8080 -n medical-app
+ 1535  kubectl logs deploy/medical-backend -n medical-app | grep Started
+ 1536  kubectl apply -f proyecto/k8s/ingress-main.yaml
+ 1537  kubectl apply -f k8s/ingress-main.yaml
+ 1538  kubectl describe ingress medical-ingress-main -n medical-app
+ 1539  kubectl delete ingress medical-ingress-main -n medical-app
+ 1540  kubectl apply -f proyecto/k8s/ingress-api.yaml
+ 1541  kubectl apply -f k8s/ingress-api.yaml
+ 1542  kubectl apply -f k8s/ingress-ui.yaml
+ 1543  kubectl get ingress -n medical-app
+ 1544  cd /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/
+ 1545  cp application.yml application.bk
+ 1546  cd ..
+ 1547  docker build -t xnando2019/ms-medical-backend:latest .
+ 1548  docker push xnando2019/ms-medical-backend:latest
+ 1549  kubectl rollout restart deploy/medical-backend -n medical-app
+ 1550  kubectl get deploy -n medical-app
+ 1551  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1552  contact-backend
+ 1553  kubectl get pods -n medical-app -l app=contact-backend
+ 1554  kubectl describe deploy contact-backend -n medical-app | grep Image:
+ 1555  kubectl get pods -n medical-app -o wide
+ 1556  kubectl get pod medical-frontend-565fd9687-6llmx -n medical-app --show-labels
+ 1557  cd /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/application.yml
+ 1558  cd /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/
+ 1559  cp application.yml  application.bk1
+ 1560  cd ..
+ 1561  ll
+ 1562  cd ..
+ 1563  ll
+ 1564  docker build -t xnando2019/ms-medical-backend:latest .
+ 1565  docker push xnando2019/ms-medical-backend:latest
+ 1566  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1567  kubectl get pods -n medical-app -l app=medical-backend
+ 1568  ll
+ 1569  docker build -t xnando2019/ms-medical-backend:latest .
+ 1570  docker push xnando2019/ms-medical-backend:latest
+ 1571  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1572  ./gradlew clean build -x test
+ 1573  docker build -t xnando2019/ms-medical-backend:latest .
+ 1574  docker push xnando2019/ms-medical-backend:latest
+ 1575  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1576  ./gradlew clean build -x test
+ 1577  docker build -t xnando2019/ms-medical-backend:latest .
+ 1578  docker push xnando2019/ms-medical-backend:latest
+ 1579  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1580  ./gradlew clean build -x test
+ 1581  docker build -t xnando2019/ms-medical-backend:latest .
+ 1582  docker push xnando2019/ms-medical-backend:latest
+ 1583  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1584  kubectl get pods -n medical-app -l app=medical-backend
+ 1585  kubectl logs -f <nombre-del-pod> -n medical-app
+ 1586  kubectl logs -f contact-backend-6f68c4cd97-7w28d -n medical-app
+ 1587  kubectl get pods -n medical-app -l app=medical-backend
+ 1588  kubectl describe pod contact-backend-6f68c4cd97-7w28d -nmedical-app
+ 1589  ./gradlew clean build -x test
+ 1590  docker build -t xnando2019/ms-medical-backend:latest .
+ 1591  docker push xnando2019/ms-medical-backend:latest
+ 1592  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1593  kubectl logs -f <pod-backend> -n medical-app
+ 1594  kubectl get pods -n medical-app -l app=medical-backend
+ 1595  kubectl logs -f contact-backend-66cd9ddfc4-thqpn -n medical-app
+ 1596  kubectl exec -it <pod-mysql> -n medical-app -- mysql -u root -p db_medical
+ 1597  kubectl get pods -n medical-app -l app=medical-backend
+ 1598  kubectl get pods -n medical-app
+ 1599  kubectl exec -it mysql-medical-7d4f8bcff8-q7vpt -n medical-app -- mysql -u root -p db_medical
+ 1600  ./gradlew clean build -x test
+ 1601  docker build -t xnando2019/ms-medical-backend:latest .
+ 1602  docker push xnando2019/ms-medical-backend:latest
+ 1603  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1604  kubectl exec -it mysql-medical-7d4f8bcff8-q7vpt -n medical-app -- mysql -u root -p db_medical
+ 1605  kubectl rollout restart deploy/contact-backend -n medical-app
+ 1606  kubectl get pods -n medical-app -w
+ 1607  kubectl logs -n medical-app deployment/medical-backend -f
+ 1608  kubectl get deployments -n medical-app
+ 1609  kubectl get pods -n medical-app -o wide
+ 1610  kubectl get svc -n medical-app
+ 1611  kubectl get ingress -n medical-app
+ 1612  ./gradlew clean build -x test
+ 1613  docker build -t xnando2019/ms-medical-backend:latest .
+ 1614  docker push xnando2019/ms-medical-backend:latest
+ 1615  kubectl rollout restart deployment medical-backend -n medical-app
+ 1616  kubectl get pods -n medical-app -w
+ 1617  kubectl exec -it -n medical-app mysql-medical-7d4f8bcff8-q7vpt -- mysql -u root -p db_medical
+ 1618  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -proot medicaldb -e "SELECT * FROM doctors;"
+ 1619  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetec123 medicaldb -e "SELECT * FROM doctors;"
+ 1620  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 medicaldb -e "SELECT * FROM doctors;"
+ 1621  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 db_medical -e "SELECT * FROM doctors;"
+ 1622  sudo cat /etc/hosts
+ 1623  minikube ip
+ 1624  kubectl get ingress -n medical-app
+ 1625  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 db_medical -e "SELECT * FROM doctors;"
+ 1626  kubectl get pods -n ingress-nginx
+ 1627  kubectl get ingress -n medical-app
+ 1628  sudo vi /etc/hosts
+ 1629  sudo cat  /etc/hosts
+ 1630  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 db_medical -e "SELECT * FROM doctors;"
+ 1631  sudo vi /etc/hosts
+ 1632  sudo systemd-resolve --flush-caches
+ 1633  curl http://medical.local/api/doctor
+ 1634  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 db_medical -e "SELECT * FROM doctors;"
+ 1635  cd /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/application.bk1
+ 1636  cd /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/
+ 1637  ls -ltr application.*
+ 1638  cp application.yml application.bk2
+ 1639  ls -ltr application.*
+ 1640  cp application.bk1 application.yml 
+ 1641  /home/ubuntu/curso/proyecto/BE/ms-medical/src/main/resources/application.bk1
+ 1642  ./gradlew clean build -x test
+ 1643  cd ..
+ 1644  ./gradlew clean build -x test
+ 1645  docker build -t xnando2019/ms-medical-backend:latest .
+ 1646  docker push xnando2019/ms-medical-backend:latest
+ 1647  kubectl rollout restart deployment medical-backend -n medical-app
+ 1648  kubectl exec -it -n medical-app deploy/mysql-medical -- mysql -uroot -pnetect123 db_medical -e "SELECT * FROM doctors;"
+ 1649  curl http://medical.local/api/doctor
+ 1650  curl http://medical.local/api-docs
+ 1651  ./gradlew clean build -x test
+ 1652  docker build -t xnando2019/ms-medical-backend:latest .
+ 1653  docker push xnando2019/ms-medical-backend:latest
+ 1654  kubectl rollout restart deployment medical-backend -n medical-app
+ 1655  history 
+ 1656  cd ..
+ 1657  ll
+ 1658  history  > bitacora_tecnica.txt

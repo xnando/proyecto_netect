@@ -1,0 +1,28 @@
+# k8s/ingress-doctors-nocache.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: medical-ingress-doctors
+  namespace: medical-app
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /doctor
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: medical.local
+    http:
+      paths:
+      - path: /doctors
+        pathType: Prefix
+        backend:
+          service:
+            name: medical-backend
+            port:
+              number: 8080
+      - path: /api/v1/doctors
+        pathType: Prefix
+        backend:
+          service:
+            name: medical-backend
+            port:
+              number: 8080
